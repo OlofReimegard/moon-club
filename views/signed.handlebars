@@ -1,0 +1,28 @@
+<main>
+    <h2 class ="goback">{{goback}}</h2>
+    <h1 class="title">{{{title}}}</h1>
+    <p class="description"> </p>
+    <ul>
+        {{#each list}}
+            <li>
+                {{#if url}}
+                    <a href="http://{{url}}" target="_blank">{{first}} {{last}}</a>
+                {{else}}
+                    {{first}} {{last}}
+                {{/if}}
+                {{#if age}}
+                    ( {{age}}
+                {{else}}
+                    {{#if city}}
+                        (<a href="/signed/{{city}}">{{city}}</a>)
+                    {{/if}}
+                {{/if}}
+                {{#if city}},
+                    <a href="/signed/{{city}}">{{city}}</a>)
+                {{else}}
+                    {{#if age}}){{/if}}
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</main>

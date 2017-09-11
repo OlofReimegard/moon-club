@@ -1,0 +1,12 @@
+<main>
+    <h2 class ="goback">{{goback}}</h2>
+    <h1 class="title">{{{title}}}</h1>
+    <p class="description">{{description}}</p>
+    <form class="reg-nav" method="post" action="/profile">
+        <input class="left-input" type="hidden" name="_csrf" value="{{csrfToken}}">
+        <input class="left-input" type="number" name="age" placeholder="age">
+        <input class="left-input" type="text" name="city" placeholder="city">
+        <input class="left-input" type="text" name="url" placeholder="webpage">
+        <button class="left-input" type="submit" value="Submit">Submit</button>
+    </form>
+</main>
